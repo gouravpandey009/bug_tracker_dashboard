@@ -36,7 +36,7 @@ export default function TaskList({ role , onEdit}: TaskListProps) {
 
         const stored = getTasks();
         setTasks(stored);
-    }, []);
+    }, [tasks]);
 
     //Timer Tick
     useEffect(() => {

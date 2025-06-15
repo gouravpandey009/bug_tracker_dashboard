@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import DeveloperDashboard from '../../components/DeveloperDashboard';
 import ManagerDashboard from '../../components/ManagerDashboard';
 
-
 export default function DashboardPage() {
   const router = useRouter();
   const [role, setRole] = useState<string | null>(null);
@@ -25,8 +24,8 @@ export default function DashboardPage() {
       } else {
         router.push('/login');
       }
-    } catch (err) {
-      router.push('/login');
+    } catch {
+      router.push('/login'); 
     } finally {
       setLoading(false);
     }
