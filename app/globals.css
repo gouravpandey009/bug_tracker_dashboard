@@ -1,0 +1,102 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Modern Font & Smooth Defaults */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-primary: #2563eb; /* Tailwind's blue-600 */
+  --brand-secondary: #1e40af; /* blue-800 */
+  --brand-accent: #60a5fa; /* blue-400 */
+  --bg-gradient: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+  --font-main: 'Inter', sans-serif;
+}
+
+/* 2. Base Typography & Body Reset */
+body {
+  @apply font-sans text-gray-800 bg-gray-50 antialiased transition-colors duration-300 ease-in-out;
+  font-family: var(--font-main);
+  background-image: var(--bg-gradient);
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-gray-900;
+}
+
+/* 3. Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  @apply w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200;
+}
+
+/* 4. Buttons */
+button {
+  @apply px-4 py-2 rounded-lg font-medium transition duration-300 ease-in-out;
+}
+
+/* Primary Button */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:scale-[1.02];
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-800;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  @apply bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg hover:from-blue-600 hover:to-blue-800;
+}
+
+/* 5. Animations */
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.7s ease-in-out both;
+  }
+  .zoom-in {
+    animation: zoomIn 0.4s ease-in-out both;
+  }
+  .slide-up {
+    animation: slideUp 0.5s ease-in-out both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* 6. Utility Classes */
+.card {
+  @apply bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  @apply rounded-2xl p-6;
+}
