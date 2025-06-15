@@ -13,7 +13,7 @@ It is a modern web application designed for **developers** and **managers** to m
 
 ## 🚀 Live Demo & Walkthrough
 
-- 🌐 **Live App:** [https://bugtracker.vercel.app](https://bugtracker.vercel.app)  
+- 🌐 **Live App:** [https://bug-tracker-five-alpha.vercel.app/login](https://bug-tracker-five-alpha.vercel.app/login)  
 - 📽️ **Video Walkthrough:** [Watch here](https://www.loom.com/share/2c7f6547198545538134d5bae5d981cf?sid=5279ddd7-2e4d-448b-a538-1da6525710c3)  
 - 🔐 **Mock Credentials:**
 
